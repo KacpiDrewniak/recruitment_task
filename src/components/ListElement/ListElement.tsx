@@ -11,6 +11,7 @@ export const ListElement = ({title, id}: Post) => {
 
   const handleRemove = async () => {
     try {
+      // przy większej ilości czasu i zaimplemtowaniu react-query do reload'u użyłbym dependency
       await actionDeletePost(id!);
       const {data} = await actionGetPosts();
       dispatch(loadPosts(data));
