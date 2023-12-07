@@ -15,7 +15,7 @@ export const ListElement = ({title, id}: Post) => {
       const {data} = await actionGetPosts();
       dispatch(loadPosts(data));
     } catch (err) {
-      Alert.alert('error');
+      Alert.alert('Error');
     }
   };
 
