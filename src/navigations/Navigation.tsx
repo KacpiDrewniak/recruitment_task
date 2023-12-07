@@ -1,12 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {
-  HomeScreen,
-  ListScreen,
-  NewPost,
-  NewPostScreen,
-  PostScreen,
-} from '../screens';
+import {HomeScreen, ListScreen, NewPostScreen, PostScreen} from '../screens';
 
 const Stack = createNativeStackNavigator();
 

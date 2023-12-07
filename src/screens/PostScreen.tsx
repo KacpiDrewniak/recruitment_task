@@ -1,6 +1,5 @@
 import {Layout} from '../components';
 import {Alert, StyleSheet, Text, View} from 'react-native';
-import {colors} from '../constants/colors.ts';
 import {useAppDispatch, useAppSelector} from '../store';
 import {Button} from '../components/Button';
 import {useNavigation} from '@react-navigation/native';
@@ -21,7 +20,7 @@ export const PostScreen = ({route: {params}}: any) => {
   const deleteCurrentPost = async () => {
     try {
       await actionDeletePost(post.id!);
-      navigate('List');
+      navigate('List' as never);
       const {data} = await actionGetPosts();
       dispatch(loadPosts(data));
     } catch (err) {
@@ -34,7 +33,10 @@ export const PostScreen = ({route: {params}}: any) => {
       <View style={styles.container}>
         <Text style={styles.titleTypography}>{post.title}</Text>
         <Text style={styles.descriptionTypography}>{post.description}</Text>
-        <Button onPress={() => navigate('NewPost')} label="Dodaj nowy" />
+        <Button
+          onPress={() => navigate('NewPost' as never)}
+          label="Dodaj nowy"
+        />
         <Button onPress={deleteCurrentPost} label="Usuń ten post" />
       </View>
     </Layout>

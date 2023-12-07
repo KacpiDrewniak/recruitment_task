@@ -1,15 +1,15 @@
 import {Alert, ScrollView, Text} from 'react-native';
-import {Layout, Post} from '../components';
+import {Layout, Post} from '../../components';
 import {useEffect, useState} from 'react';
-import {actionGetPosts} from '../actions';
-import {useAppDispatch} from '../store';
-import {Loading} from '../components';
-import {loadPosts} from '../store/slices/postsSlice';
-import {usePosts} from '../store/selectors';
+import {actionGetPosts} from '../../actions';
+import {useAppDispatch} from '../../store';
+import {Loading} from '../../components';
+import {loadPosts} from '../../store/slices/postsSlice.ts';
+import {usePosts} from '../../store/selectors';
 import {useNavigation} from '@react-navigation/native';
-import {description} from '../../mocks';
-import house from './../assets/house.png';
-import floor from './../assets/floor.png';
+import {description} from '../../../mocks';
+import house from '../../assets/house.png';
+import floor from '../../assets/floor.png';
 
 export const HomeScreen = () => {
   const dispatch = useAppDispatch();

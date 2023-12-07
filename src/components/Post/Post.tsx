@@ -1,5 +1,5 @@
 import {StyleSheet, View, Text, ImageBackground} from 'react-native';
-import {Post as PostType} from '../../type';
+import {Post as PostType} from '../../types/types.ts';
 import {Button} from '../Button';
 import {colors} from '../../constants/colors.ts';
 

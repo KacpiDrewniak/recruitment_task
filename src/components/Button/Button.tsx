@@ -1,5 +1,5 @@
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
-import {ButtonType} from '../../type';
+import {ButtonType} from '../../types/types.ts';
 import {colors} from '../../constants/colors.ts';
 
 export const Button = ({label, onPress}: ButtonType) => {

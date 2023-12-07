@@ -1,5 +1,5 @@
 import {Alert, Button, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {Post} from '../../type';
+import {Post} from '../../types/types.ts';
 import {useNavigation} from '@react-navigation/native';
 import {actionDeletePost, actionGetPosts} from '../../actions';
 import {loadPosts} from '../../store/slices/postsSlice.ts';

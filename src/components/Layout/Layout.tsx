@@ -1,6 +1,6 @@
 import {StyleSheet, View} from 'react-native';
 import {ReactNode} from 'react';
-import {LayoutType} from '../../type';
+import {LayoutType} from '../../types/types.ts';
 
 export const Layout = ({children}: LayoutType) => {
   return <View style={container}>{children}</View>;

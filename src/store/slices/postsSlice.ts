@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {Post} from '../../type';
+import {Post} from '../../types/types.ts';
 
 type postSliceType = {
   posts: Post[];

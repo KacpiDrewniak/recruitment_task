@@ -17,7 +17,7 @@ export const NewPostScreen = () => {
       await actionPostPosts(title, description);
       const {data} = await actionGetPosts();
       dispatch(loadPosts(data));
-      navigate('List');
+      navigate('List' as never);
     } catch (err) {
       Alert.alert('error');
     } finally {
